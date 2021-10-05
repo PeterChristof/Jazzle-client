@@ -25,14 +25,16 @@ function PostDetails({ match }) {
     history.push("/");
   };
 
+  
+
   return (
     <>
-    <main className="Height">
-      <h2>{post.title}</h2>
-      <h3>{post.description}</h3>
+    <main className="detailsPage">
+      <h4>Do you really want to delete this Post?</h4>
+      
 
       <NavLink to={`/post/${post._id}/edit`}>Edit</NavLink>
-      <button onClick={handleDeletePost}>Delete</button>
+      <button className="nav-button" onClick={handleDeletePost}>Delete</button>
       </main>
     </>
   );

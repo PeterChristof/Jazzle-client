@@ -106,14 +106,14 @@ function Feed({ loggedInUser }) {
               </p>
               
               <div>
-                <p> {post.likes.length} Likes</p>
-                <button onClick={() => handleFormSubmit(post._id)}>Like</button>
+                <p> {post.likes.length} Yeahs</p>
+                <button className="likeButton" onClick={() => handleFormSubmit(post._id)}>YEAH</button>
               </div>
               <div>
-              <NavLink to={`/post/${post._id}/edit`}>Edit</NavLink>
+              <NavLink className="editButton" to={`/post/${post._id}/edit`}>EDIT</NavLink>
               </div>
               <div key={post._id}>
-              <NavLink to={`/post/${post._id}`}>Details</NavLink>
+              <NavLink className="editButton" to={`/post/${post._id}`}>DELETE?</NavLink>
               </div>
             </div>
           

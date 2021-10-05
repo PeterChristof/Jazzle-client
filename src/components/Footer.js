@@ -22,7 +22,7 @@ function Footer({loggedInUser, setCurrentLoggedInUser}) {
              
             </li>
             <li>
-             <p className="Footer">Made with Love by Laura & Peter </p>
+             <p className="Footer">Made by Laura & Peter </p>
              
             </li>
           </ul>

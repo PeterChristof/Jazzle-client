@@ -106,24 +106,85 @@
   color: white;
 }
 
+.CreateList {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
 /* Feed */
 
 .feedCard {
   border-radius: 20px;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(194, 124, 124);
   opacity: 0.5;
-  border: 2px solid #212529;
+  border: 10px solid #212529;
   width: auto;
   min-height: 30vh;
   display: flex;
-  gap: 10px;
+  grid-gap: 10px;
+  gap: 5px;
   flex-direction: column;
   margin-top: 20px;
   color: black;
   padding: 40px 40px;
-  margin: 40px 40px;
+  margin: 0px 40px;
+  text-align: center;
 }
 
 .mainBack {
   background-color: rgb(25, 33, 41);
+}
+
+.likeButton {
+  
+    background-color: white;
+    border: black;
+    color: rgb(5, 5, 5);
+   border-radius: 10%;
+   margin-bottom: 40px;
+   transition-duration: 0.4s;
+   font: bold;
+  }
+  
+  .likeButton:Hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  
+}
+
+/* EDIT */
+
+.editButton {
+color: black;
+ font: bold;
+}
+
+.editSide {
+  color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding-top: 40px;
+display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 30;
+    list-style: none;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    min-height: 100vh; 
+    background-image: url("../src/Images/logo_ncs_1v2.jpeg");
+}
+
+/* Detail/Delete */
+
+.detailsPage {
+  display: flex;
+  color: white;
+  background-image: url("../src/Images/logo_ncs_1v2.jpeg");
+  min-height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
 }

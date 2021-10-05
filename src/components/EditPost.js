@@ -42,31 +42,34 @@ function EditPost({ match }) {
 
   return (
     <>
-    <main className="textColor">
+    <main className="editSide">
      <div>
       <form onSubmit={handleFormSubmit}>
-        <label>Title</label>
+        <label>Title:</label>
         <input
           type="text"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
         />
 
-        <label>Description</label>
+        <label>Description:</label>
         <input
           type="text"
           onChange={(e) => setDescription(e.target.value)}
           value={description}
         />
 
-        <label>Song Link</label>
+        <label>Song Link:</label>
         <input
           type="url"
           onChange={(e) => setSongLink(e.target.value)}
           value={songLink}
         />
+<br/>
+<br/>
 
-        <button type="submit">Update</button>
+        <button className="nav-button" type="submit">Update</button>
+        
       </form>
       </div>
       </main>

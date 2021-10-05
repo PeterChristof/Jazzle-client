@@ -48,7 +48,7 @@ function CreatePost({addPost, loggedInUser}) {
     <br/>
       
       <form onSubmit={handleFormSubmit} encType="multipart/form-data">
-<ul className="CreateList">
+<ul className="CreateList" className="CreateList">
 <li>
         <label>Title: </label>
         <input
