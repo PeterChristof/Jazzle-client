@@ -22,8 +22,13 @@ function Footer({loggedInUser, setCurrentLoggedInUser}) {
              
             </li>
             <li>
-             <p className="Footer">Made by Laura & Peter </p>
+             <p className="Footer">Made by Laura Roncallo & Peter Erian</p>
              
+            </li>
+            <li>
+                <NavLink activeStyle={{ color: "white" }} to="/about">
+                About
+              </NavLink>
             </li>
           </ul>
         </nav>

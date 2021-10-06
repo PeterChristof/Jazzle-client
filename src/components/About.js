@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 
-function EditPost({ match }) {
+function About({ match }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [songLink, setSongLink] = useState("");
@@ -37,44 +37,32 @@ function EditPost({ match }) {
     );
 
     toast.success("Post updated");
-    history.push("/feed");
+    history.push("/post");
   };
 
   return (
     <>
-    <main className="editSide">
-     <div>
-      <form onSubmit={handleFormSubmit}>
-        <label>Title:</label>
-        <input
-          type="text"
-          onChange={(e) => setTitle(e.target.value)}
-          value={title}
-        />
-
-        <label>Description:</label>
-        <input
-          type="text"
-          onChange={(e) => setDescription(e.target.value)}
-          value={description}
-        />
-
-        <label>Song Link:</label>
-        <input
-          type="url"
-          onChange={(e) => setSongLink(e.target.value)}
-          value={songLink}
-        />
-<br/>
-<br/>
-
-        <button className="nav-button" type="submit">Update</button>
-        
-      </form>
+    <main className="aboutSide">
+     <div className="AboutText">
+      <h4>What is it?</h4>
+      </div>
+      <div>
+      <h5>Jazzle is a social media web app built using Mongo, Express, React.js and Node.js (MERN stack).
+      It's a Platform to share your mood through music / favourite song / best concert with friends and the world.</h5>
+      <br/>
+      <h4>Who are we?</h4>
+      <h5>2 Junior Full Stack Developers from Colombia and Austria.</h5>
+      <br/>
+      <h4>Our Core Values</h4>
+      <h5>Be transparent</h5>
+      <h5>Keep community at our center</h5>
+      <h5>Connecting People</h5>
+      <h5>Share Music - not Pictures, fake news...</h5>
+      <a href="https://www.youtube.com/watch?v=P2AU5ioxDAo">Bahama Soul Club - No Words</a>
       </div>
       </main>
     </>
   );
 }
 
-export default EditPost;
+export default About;

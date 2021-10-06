@@ -22,7 +22,7 @@ function PostDetails({ match }) {
       `${process.env.REACT_APP_SERVER_HOSTNAME}/post/${match.params.id}`
     );
     toast.success("Post deleted");
-    history.push("/");
+    history.push("/feed");
   };
 
   

@@ -14,6 +14,7 @@ import PostDetails from './components/PostDetails';
 import EditPost from './components/EditPost';
 import UserProfile from './components/UserProfile';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   const [loggedInUser,setCurrentLoggedInUser]=  useState("");
@@ -55,8 +56,8 @@ function App() {
         {/* Create userprofile page
             Access this page/component from the Feed 
             Add links to follow and unfollow
-
          */}
+         <Route path="/about" component={About} />
           </Switch>
          <Footer/>
     </div>
