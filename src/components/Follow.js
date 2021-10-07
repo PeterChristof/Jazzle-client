@@ -13,10 +13,6 @@
 //     history.push("/feed");
 //   };
 
-
-
-
-
 // import React from "react";
 // import axios from 'axios';
 

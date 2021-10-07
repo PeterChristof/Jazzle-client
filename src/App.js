@@ -52,7 +52,7 @@ function App() {
           return <Login setCurrentLoggedInUser={setCurrentLoggedInUser} />;
         }} />
 
-        <Route path="/user/:id" component={UserProfile} />
+        <Route path="/userprofile" component={UserProfile} />
         {/* Create userprofile page
             Access this page/component from the Feed 
             Add links to follow and unfollow

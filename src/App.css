@@ -37,7 +37,7 @@
   text-align: center;
   background-color: rgb(25, 33, 41);
   color: rgb(255, 255, 255);
-  font-family: cursive;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
 }
 
@@ -88,7 +88,8 @@
 
 .CreateBack {
   background-color: rgb(25, 33, 41);
-  color: rgb(194, 124, 124);
+  color: rgba(111, 110, 180, 0.65);
+  font-style: italic;
 }
 
 .CreateButton {
@@ -111,12 +112,17 @@
   margin-bottom: 0rem;
 }
 
+textarea {
+  width: 40px;
+}
+
 /* Feed */
 
 .feedCard {
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.5;
+  background-color: white;
+  /* background-color: rgb(255, 255, 255); */
+  opacity: 0.9;
   border: 10px solid #212529;
   width: auto;
   min-height: 30vh;
@@ -171,7 +177,7 @@ display: flex;
     align-content: space-between;
     flex-wrap: nowrap;
     justify-content: space-around;
-    min-height: 100vh; 
+    min-height: 81vh; 
     background-image: url("../src/Images/logo_ncs_1v2.jpeg");
 }
 
@@ -181,7 +187,7 @@ display: flex;
   display: flex;
   color: white;
   background-image: url("../src/Images/logo_ncs_1v2.jpeg");
-  min-height: 100vh;
+  min-height: 81vh;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -204,5 +210,34 @@ color: white;
 
 .AboutText {
   display: flex;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  flex-direction: column;
+}
 
+input {
+  width: 100%;
+}
+
+.reactPlayer {
+display: flex;
+}
+
+.userProfile {
+  border-radius: 10px;
+  background-color: white;
+  /* background-color: rgb(255, 255, 255); */
+  opacity: 0.9;
+  border: 5px solid #212529;
+  width: auto;
+  min-height: 81vh;
+  display: flex;
+  grid-gap: 5px;
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 5px;
+  color: black;
+  padding: 20px 20px;
+  margin: 0px 40px;
+  text-align: center;
 }

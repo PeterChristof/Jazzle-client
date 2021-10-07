@@ -87,7 +87,11 @@ function Feed({ loggedInUser }) {
 
               <h3>{post.title}</h3>
               
-              {post.postedBy && <p>posted by: {post.postedBy.username}</p> }
+              
+            {/* <NavLink> */}
+             {/* to={post.postedBy._id} */}
+            {post.postedBy && <p>posted by: {post.postedBy.username}</p> }
+            {/* </NavLink> */}
               {/* <Datetime /> */}
              
               

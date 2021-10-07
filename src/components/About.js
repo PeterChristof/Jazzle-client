@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 function About({ match }) {
   const [title, setTitle] = useState("");
@@ -46,7 +47,7 @@ function About({ match }) {
      <div className="AboutText">
       <h4>What is it?</h4>
       </div>
-      <div>
+      <div className="AboutText">
       <h5>Jazzle is a social media web app built using Mongo, Express, React.js and Node.js (MERN stack).
       It's a Platform to share your mood through music / favourite song / best concert with friends and the world.</h5>
       <br/>
@@ -58,7 +59,9 @@ function About({ match }) {
       <h5>Keep community at our center</h5>
       <h5>Connecting People</h5>
       <h5>Share Music - not Pictures, fake news...</h5>
-      <a href="https://www.youtube.com/watch?v=P2AU5ioxDAo">Bahama Soul Club - No Words</a>
+      <ReactPlayer className="reactPlayer" url='https://www.youtube.com/watch?v=P2AU5ioxDAo' />
+
+      {/* <a href="https://www.youtube.com/watch?v=P2AU5ioxDAo">Bahama Soul Club - No Words</a> */}
       </div>
       </main>
     </>

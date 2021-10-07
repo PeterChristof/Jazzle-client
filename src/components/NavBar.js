@@ -27,7 +27,12 @@ function NavBar({loggedInUser, setCurrentLoggedInUser}) {
                 Create Post
               </NavLink>
             </li>
-
+            <li>
+            {/* CurrentLoggedInUser */}
+                <NavLink activeStyle={{ color: "white" }} to="/userprofile">
+                User Profile
+              </NavLink>
+            </li>
           <li>
                 <NavLink exact to="/">
                   <button onClick={logoutUser} className="nav-button">Logout</button>

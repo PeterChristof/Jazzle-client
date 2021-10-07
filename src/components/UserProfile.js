@@ -2,41 +2,46 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
+import Feed from "./Feed";
 
-function UserDetails({ match }) {
+function UserProfile({ match }) {
   const [user, setUser] = useState({});
   const history = useHistory();
 
   useEffect(() => {
-    async function getUserDetails() {
+    async function getUserProfile() {
       const response = await axios.get(
-        `${process.env.REACT_APP_SERVER_HOSTNAME}/user/${match.params.id}`
+        `${process.env.REACT_APP_SERVER_HOSTNAME}/userprofile`,
+        { withCredentials: true }
       );
       setUser(response.data);
     }
-    getUserDetails();
+    getUserProfile();
   }, []);
 
-//   const handleDeletePost = async (id) => {
-//     await axios.delete(
-//       `${process.env.REACT_APP_SERVER_HOSTNAME}/post/${id}`
-//     );
-//     toast.success("Post deleted");
-//     history.push("/post");
-//   };
+  const handleDeleteUser = async (id) => {
+    await axios.delete(`${process.env.REACT_APP_SERVER_HOSTNAME}/users/id`);
+    toast.success("User deleted");
+    history.push("/");
+  };
+
 
   return (
     <>
-    <main>
-      <h2>{user.username}</h2>
-      <h3>{user.followers}</h3>
-      <h3>{user.following}</h3>
+      <main className="userProfile">
+        <h1>Your Profile:</h1>
+        <h2>Name: {user.username}</h2>
+        <h3>Followers: {user.followers && user.followers.map((follower) => { 
+          return <div>{follower.username}</div>
+        })}</h3>
+        <h3>{user.username} follows: {user.followings && user.followings.map((follow) => { 
+          return <div>{follow.username}</div>
+        })}</h3>
 
-      {/* <NavLink to={`/post/${post._id}/edit`}>Edit</NavLink> */}
-      {/* <button onClick={() => handleDeletePost(post._id)}>Delete</button> */}
+        <button onClick={() => handleDeleteUser(user)}>Delete User</button>
       </main>
     </>
   );
 }
 
-export default UserDetails;
+export default UserProfile;
