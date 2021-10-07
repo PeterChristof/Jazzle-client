@@ -14,13 +14,14 @@ function UserProfile({ match }) {
         `${process.env.REACT_APP_SERVER_HOSTNAME}/userprofile`,
         { withCredentials: true }
       );
+      console.log(response.data);
       setUser(response.data);
     }
     getUserProfile();
   }, []);
 
   const handleDeleteUser = async (id) => {
-    await axios.delete(`${process.env.REACT_APP_SERVER_HOSTNAME}/users/id`);
+    await axios.delete(`${process.env.REACT_APP_SERVER_HOSTNAME}/users/${id}`,);
     toast.success("User deleted");
     history.push("/");
   };
@@ -29,16 +30,16 @@ function UserProfile({ match }) {
   return (
     <>
       <main className="userProfile">
-        <h1>Your Profile:</h1>
-        <h2>Name: {user.username}</h2>
-        <h3>Followers: {user.followers && user.followers.map((follower) => { 
+        <h2>Your Profile:</h2>
+        <h3>Name: {user.username}</h3>
+        <h4>Followers: {user.followers && user.followers.map((follower) => { 
           return <div>{follower.username}</div>
-        })}</h3>
-        <h3>{user.username} follows: {user.followings && user.followings.map((follow) => { 
+        })}</h4>
+        <h4>{user.username} follows: {user.followings && user.followings.map((follow) => { 
           return <div>{follow.username}</div>
-        })}</h3>
+        })}</h4>
 
-        <button onClick={() => handleDeleteUser(user)}>Delete User</button>
+        <button className="nav-button" onClick={() => handleDeleteUser(user._id)}>Delete User</button>
       </main>
     </>
   );

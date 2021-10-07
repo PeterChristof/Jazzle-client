@@ -1,17 +1,3 @@
-// const handleFormSubmit = async (id) => {
-//     const response = await axios.post(
-//       `${process.env.REACT_APP_SERVER_HOSTNAME}/post/${id}/like`,
-//       null,
-//       { withCredentials: true }
-//     );
-
-//     //  console.log(response.data)
-//     console.log(response.data.likes.length);
-//     setLikes(response.data.likes.length);
-   
-//     setPosts(posts.map(post => post._id === id ? {...post, likes : response.data.likes} : post));
-//     history.push("/feed");
-//   };
 
 // import React from "react";
 // import axios from 'axios';

@@ -88,7 +88,7 @@
 
 .CreateBack {
   background-color: rgb(25, 33, 41);
-  color: rgba(111, 110, 180, 0.65);
+  color: rgb(238, 232, 255);
   font-style: italic;
 }
 
@@ -226,9 +226,7 @@ display: flex;
 .userProfile {
   border-radius: 10px;
   background-color: white;
-  /* background-color: rgb(255, 255, 255); */
   opacity: 0.9;
-  border: 5px solid #212529;
   width: auto;
   min-height: 81vh;
   display: flex;
@@ -240,4 +238,8 @@ display: flex;
   padding: 20px 20px;
   margin: 0px 40px;
   text-align: center;
+  background-image: url("./Images/pianopic.jpg");
+  background-repeat:   no-repeat;
+background-position: center center; 
+background-size: cover;
 }
