@@ -16,6 +16,7 @@ function NavBar({loggedInUser, setCurrentLoggedInUser}) {
         <>
 
         <nav className="nav-bar">
+        <img className="logo" src="/logo1.png" alt="logo" width="100" height="100" /> 
           <ul className="nav-bar-ul">
           <li>
                 <NavLink activeStyle={{ color: "white" }} exact to="/feed">
@@ -40,14 +41,15 @@ function NavBar({loggedInUser, setCurrentLoggedInUser}) {
               </li>
           </ul>
         </nav>
-        <div className="Welcome">Start Jazzling - {loggedInUser.username}</div>
+        <div className="Welcome">Start Jazzling 🤟 {loggedInUser.username}</div>
         </>
          ) : (
            <>
           
           
           <nav className="nav-bar">
-          <ul className="nav-bar-ul">
+          <img className="logo" src="/logo1.png" alt="logo" width="100" height="100" /> 
+          <ul className="nav-bar-ul">    
             <li>
               <NavLink activeStyle={{ color: "white" }} to="/signup" >
                 Signup
@@ -64,6 +66,7 @@ function NavBar({loggedInUser, setCurrentLoggedInUser}) {
                  Feed
                 </NavLink>
               </li>
+              
           </ul>
           </nav>
           

@@ -90,7 +90,7 @@ function Feed({ loggedInUser }) {
               
             {/* <NavLink> */}
              {/* to={post.postedBy._id} */}
-            {post.postedBy && <p>posted by: {post.postedBy.username}</p> }
+            {post.postedBy && <p><span className="posttitles">Posted by:</span> {post.postedBy.username}</p> }
             {/* </NavLink> */}
               {/* <Datetime /> */}
              
@@ -100,10 +100,10 @@ function Feed({ loggedInUser }) {
               {/* <NavLink to={`/user/${user._id}`}>{}</NavLink> */}
 
               <p>
-                <span className="bold">Description</span>: {post.description}
+                <span className="posttitles">Description</span>: {post.description}
               </p>
               <p>
-                <span className="bold">songLink</span>:
+                <span className="posttitles">SongLink</span>:
                 <a href={post.songLink} target="_blank">
                   Listen
                 </a>
@@ -111,7 +111,7 @@ function Feed({ loggedInUser }) {
               
               <div>
                 <p> {post.likes.length} Yeahs</p>
-                <button className="likeButton" onClick={() => handleFormSubmit(post._id)}>YEAH</button>
+                <button className="likeButton" onClick={() => handleFormSubmit(post._id)}>YEAH 🤟</button>
               </div>
               <div>
               <NavLink className="editButton" to={`/post/${post._id}/edit`}>EDIT</NavLink>

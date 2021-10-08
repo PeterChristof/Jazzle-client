@@ -3,13 +3,21 @@
 .nav-bar {
   background-color: rgb(25, 33, 41);
   padding: 14px 0;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
 }
+
 
 .nav-bar-ul {
   width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
+
 }
 
 .nav-button {
@@ -20,18 +28,19 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
     border-radius: 10%;
     transition-duration: 0.4s;
     font: bold;
 }
 
 .nav-button:hover {
-  background-color: #4CAF50; /* Green */
+  background-color:#680566;; /* Green */
   color: white;
 }
 
 .Welcome {
+  height: 45px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -39,6 +48,13 @@
   color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
+}
+
+/* added to the logo image in the navbar */
+
+.logo{
+  background-color: #680566;
+  border-radius: 50px;
 }
 
 /* Footer */
@@ -70,7 +86,8 @@
 }
 
 .SignButton:Hover {
-  background-color: #4CAF50; /* Green */
+  background-color: #680566;
+  /* background-color: #4CAF50; Green */
   color: white;
 }
 
@@ -79,6 +96,7 @@
 .CreateList {
   display: flex;
   justify-content: space-around;
+  list-style-type: none;
 }
 
 .CreateTag {
@@ -90,6 +108,7 @@
   background-color: rgb(25, 33, 41);
   color: rgb(238, 232, 255);
   font-style: italic;
+  margin-bottom: -10px;
 }
 
 .CreateButton {
@@ -100,10 +119,12 @@
  margin-bottom: 40px;
  transition-duration: 0.4s;
  font: bold;
+ margin-bottom: 60px;
+ margin-top: 20px;
 }
 
 .CreateButton:Hover {
-  background-color: #4CAF50; /* Green */
+  background-color: #680566; /* Green */
   color: white;
 }
 
@@ -118,11 +139,11 @@ textarea {
 
 /* Feed */
 
-.feedCard {
+/* .feedCard {
   border-radius: 20px;
   background-color: white;
   /* background-color: rgb(255, 255, 255); */
-  opacity: 0.9;
+  /* opacity: 0.9;
   border: 10px solid #212529;
   width: auto;
   min-height: 30vh;
@@ -135,6 +156,33 @@ textarea {
   padding: 40px 40px;
   margin: 0px 40px;
   text-align: center;
+} */ 
+
+.feedCard {
+  border-radius: 54px;
+  background-color: #c9b105;
+  background-color: #dbc213;
+  opacity: 0.9;
+  border: 13px solid #ffffff;
+  width: auto;
+  min-height: 21vh;
+  display: flex;
+  grid-gap: 0px;
+  grid-gap: -7px;
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 20px;
+  color: black;
+  padding: 40px 40px;
+  margin: 5px 165px;
+  text-align: center;
+  color: #141413;
+  font-weight: bolder
+}
+
+/* added to feed  */
+.posttitles{
+  font-weight: bolder;
 }
 
 .mainBack {
@@ -150,10 +198,11 @@ textarea {
    margin-bottom: 40px;
    transition-duration: 0.4s;
    font: bold;
+   padding:10px 10px 10px 20px;
   }
   
   .likeButton:Hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #680566;/* Green */
     color: white;
   
 }
@@ -200,19 +249,37 @@ display: flex;
 .aboutSide {
   /* background-color: white;
   min-height: 80vh; */
-background-image: url("../src/Images/turntable2.jpg");
+background-image: url("../src/Images/b4.jpg");
 background-repeat:   no-repeat;
 background-position: center center; 
 background-size: cover;
 min-height: 80vh;
 color: white;
+padding-left: 30px;
+/* color: #680566; */
+padding-right: 137px;
+padding-top: 25px;
+padding-bottom: 10px;
+display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .AboutText {
   display: flex;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-style: italic;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic; */
   flex-direction: column;
+}
+
+.AboutText h4{
+  color:#680566;
+  font-weight:bolder;
+
+
 }
 
 input {
@@ -223,7 +290,7 @@ input {
 display: flex;
 }
 
-.userProfile {
+/* .userProfile {
   border-radius: 10px;
   background-color: white;
   opacity: 0.9;
@@ -242,4 +309,58 @@ display: flex;
   background-repeat:   no-repeat;
 background-position: center center; 
 background-size: cover;
-}
+} */
+
+.userProfile {
+  /* border-radius: 10px; */
+    /* background-color: white; */
+    opacity: 0.9;
+    width: auto;
+    min-height: 75vh;
+    display: flex;
+    grid-gap: 5px;
+    grid-gap: 5px;
+    gap: 5px;
+    flex-direction: row;
+    margin-top: 5px;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    /* margin: 0px 40px; */
+    text-align: center;
+    background-image: url("./Images/b6.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    place-content: flex-start center;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;}
+
+
+.userProfile1 {border-radius: 200px;
+  background-color: #680566;
+  /* opacity: 7.9; */
+  width: 500px;
+  min-height: 50vh;
+  display: flex;
+  grid-gap: 5px;
+  grid-gap: 5px;
+  grid-gap: 5px;
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 5px;
+  color: black;
+  padding: 20px 20px;
+  margin: 0px 40px;
+  text-align: center;
+  /* background-image: url(./Images/b7.jpg); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  color: #e7c73b}

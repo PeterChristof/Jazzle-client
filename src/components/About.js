@@ -41,28 +41,62 @@ function About({ match }) {
     history.push("/post");
   };
 
+//   return (
+//     <>
+//     <main className="aboutSide">
+//      <div className="AboutText">
+//       <h4>What is it?</h4>
+//       </div>
+//       <div className="AboutText">
+//       <h5>Jazzle is a social media web app built using Mongo, Express, React.js and Node.js (MERN stack).
+//       It's a Platform to share your mood through music / favourite songs / best concert with friends and the world.</h5>
+//       <br/>
+//       <h4>Who are we?</h4>
+//       <h5>2 Junior Full Stack Developers from Colombia and Austria.</h5>
+//       <br/>
+//       <h4>Our Core Values</h4>
+//       <h5>Be transparent</h5>
+//       <h5>Keep community at our center</h5>
+//       <h5>Connecting People</h5>
+//       <h5>Share Music - not Pictures, fake news...</h5>
+//       <ReactPlayer className="reactPlayer" url='https://www.youtube.com/watch?v=P2AU5ioxDAo' />
+
+//       {/* <a href="https://www.youtube.com/watch?v=P2AU5ioxDAo">Bahama Soul Club - No Words</a> */}
+//       </div>
+//       </main>
+//     </>
+//   );
+// }
+
   return (
     <>
     <main className="aboutSide">
+      <div>
+    
      <div className="AboutText">
-      <h4>What is it?</h4>
+      <h4>What is Jazzle?</h4>
       </div>
       <div className="AboutText">
       <h5>Jazzle is a social media web app built using Mongo, Express, React.js and Node.js (MERN stack).
-      It's a Platform to share your mood through music / favourite song / best concert with friends and the world.</h5>
+      It's a Platform to share your mood through music / favourite songs / best concert with friends and the world.</h5>
       <br/>
       <h4>Who are we?</h4>
-      <h5>2 Junior Full Stack Developers from Colombia and Austria.</h5>
+      <h5>2 not so geeky lovers of music, sushi and tech - from Austria and Colombia</h5>
       <br/>
-      <h4>Our Core Values</h4>
-      <h5>Be transparent</h5>
-      <h5>Keep community at our center</h5>
-      <h5>Connecting People</h5>
+      <h4>Our Jazzle</h4>
+      <h5>Work hard 🎸</h5>
+      <h5>Play harder ▶️ </h5>
       <h5>Share Music - not Pictures, fake news...</h5>
+      </div>
+      </div>
+
+      <div>
       <ReactPlayer className="reactPlayer" url='https://www.youtube.com/watch?v=P2AU5ioxDAo' />
+      </div>
 
       {/* <a href="https://www.youtube.com/watch?v=P2AU5ioxDAo">Bahama Soul Club - No Words</a> */}
-      </div>
+     
+   
       </main>
     </>
   );

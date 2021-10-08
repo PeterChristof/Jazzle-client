@@ -44,7 +44,7 @@ function CreatePost({addPost, loggedInUser}) {
     <>
     <main className="CreateBack">
     <br/>
-    <h3 className="CreateTag">Create Post</h3>
+    <h3 className="CreateTag">What are you listening to?</h3>
     <br/>
       
       <form onSubmit={handleFormSubmit} encType="multipart/form-data">
@@ -95,7 +95,7 @@ function CreatePost({addPost, loggedInUser}) {
         <input type="file" onChange={(e) => setImage(e.target.files[0])} /> */}
         <br/>
         <br/>
-        <button type="submit" className="CreateButton">Create</button>
+        <button type="submit" className="CreateButton">Share</button>
         </ul>
       </form>
       </main>
